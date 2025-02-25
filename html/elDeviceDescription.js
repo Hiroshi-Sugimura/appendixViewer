@@ -960,7 +960,7 @@ const jsonData = {
           "accessRule":{"get":"required", "set":"notApplicable", "inf":"optional"},
           "data":{ "$ref":"#/definitions/raw_4" },
           "note":{
-              "ja":"1,2,4バイト目は0x00。3バイト目は機器オブジェクトのリリースバージョンをASCIIで表す。リリース Aのみ小文字で0x61, B以降は大文字で0x42, 0x43...", 
+              "ja":"1,2,4バイト目は0x00。3バイト目は機器オブジェクトのリリースバージョンをASCIIで表す。リリース Aのみ小文字で0x61, B以降は大文字で0x42, 0x43...",
               "en":"1st, 2nd and 4th data is 0x00. 3rd data is the release version of Device Object in ASCII. Only release A utilize lower case letter 0x61, Release B and later utilize upper case letter such as 0x42, 0x43..."
           }
       },
@@ -1953,7 +1953,7 @@ const jsonData = {
                                   "type":"state",
                                   "size":4,
                                   "enum":[{"edt":"0xFFFFFFFE", "state":{"ja":"No data","en":"No data"}}]
-                              }                                
+                              }
                           ]
                       }
                   }
@@ -3502,7 +3502,7 @@ const jsonData = {
                   "oneOf":[
                       { "$ref":"#/definitions/number_-127-125Celsius" },
                       { "$ref":"#/definitions/state_Undefined-7E" }
-                  ]                    
+                  ]
               }
           }
       },
@@ -3519,7 +3519,7 @@ const jsonData = {
                   "oneOf":[
                       { "$ref":"#/definitions/number_0-100%" },
                       { "$ref":"#/definitions/state_Undefined-FD" }
-                  ]                    
+                  ]
               }
           }
       },
@@ -3639,7 +3639,7 @@ const jsonData = {
                           {"edt":"0x71", "state":{"ja":"連続運転", "en":"Continuous operation"}},
                           {"edt":"0x72", "state":{"ja":"間欠運転", "en":"Intermittent operation"}}
                       ]
-                  }            
+                  }
               ]
           },
           "note":{"ja":"0xC0または0xC1のいずれかが必須", "en":"Either 0xC0 or 0xC1 is required." }
@@ -3659,7 +3659,7 @@ const jsonData = {
                           {"edt":"0x71", "state":{"ja":"連続運転", "en":"Continuous operation"}},
                           {"edt":"0x72", "state":{"ja":"間欠運転", "en":"Intermittent operation"}}
                       ]
-                  }            
+                  }
               ]
           },
           "note":{"ja":"0xC0または0xC1のいずれかが必須", "en":"Either 0xC0 or 0xC1 is required." }
@@ -3990,7 +3990,7 @@ const jsonData = {
           "validRelease":{"from":"E", "to":"latest"},
           "propertyName":{"ja":"風量設定", "en":"Air flow rate setting"},
           "accessRule":{"get":"optional", "set":"optional", "inf":"optional"},
-          "data":{ 
+          "data":{
               "type":"state",
               "size":1,
               "enum":[
@@ -4005,7 +4005,7 @@ const jsonData = {
           "validRelease":{"from":"E", "to":"latest"},
           "propertyName":{"ja":"ファン動作状態", "en":"Fan operation status"},
           "accessRule":{"get":"optional", "set":"notApplicable", "inf":"required"},
-          "data":{ 
+          "data":{
               "type":"state",
               "size":1,
               "enum":[
@@ -6468,7 +6468,7 @@ const jsonData = {
                       "enum":[
                           {"edt":"0xFFFF", "state":{"ja":"無限","en":"limitless"}}
                       ]
-                  }            
+                  }
               ]
           }
       },
@@ -6485,7 +6485,7 @@ const jsonData = {
                       "enum":[
                           {"edt":"0xFFFF", "state":{"ja":"無限","en":"limitless"}}
                       ]
-                  }            
+                  }
               ]
           }
       },
@@ -6965,11 +6965,11 @@ const jsonData = {
                       "type":"state",
                       "size":7,
                       "enum":[{
-                          "edt":"0xFFFFFFFFFFFFFF", 
+                          "edt":"0xFFFFFFFFFFFFFF",
                           "state":{
                               "ja":"出力制御スケジュールによる出力制御が必要ない太陽光発電および、出力制御スケジュールが取得できていない場合",
                               "en":"Solar power generation that requires no output power control by output power controlling schedule and cases where output power controlling schedule has not been acquired"
-                          }, 
+                          },
                           "readOnly":true
                         }
                       ]
@@ -7704,8 +7704,8 @@ const jsonData = {
                           {"edt":"0x41", "state":{"ja":"発電中", "en":"Generating"}},
                           {"edt":"0x42", "state":{"ja":"停止中", "en":"Stopped"}},
                           {"edt":"0x43", "state":{"ja":"起動中", "en":"Starting"}},
-                          {"edt":"0x43", "state":{"ja":"停止動作中", "en":"Stopping"}},
-                          {"edt":"0x43", "state":{"ja":"アイドル中", "en":"idling"}}
+                          {"edt":"0x44", "state":{"ja":"停止動作中", "en":"Stopping"}},
+                          {"edt":"0x45", "state":{"ja":"アイドル中", "en":"idling"}}
                       ]
                   }
               },
@@ -7720,8 +7720,8 @@ const jsonData = {
                           {"edt":"0x41", "state":{"ja":"発電中", "en":"Generating"}},
                           {"edt":"0x42", "state":{"ja":"停止中", "en":"Stopped"}},
                           {"edt":"0x43", "state":{"ja":"起動中", "en":"Starting"}},
-                          {"edt":"0x43", "state":{"ja":"停止動作中", "en":"Stopping"}},
-                          {"edt":"0x43", "state":{"ja":"アイドル中", "en":"idling"}}
+                          {"edt":"0x44", "state":{"ja":"停止動作中", "en":"Stopping"}},
+                          {"edt":"0x45", "state":{"ja":"アイドル中", "en":"idling"}}
                       ]
                   }
               }
@@ -8825,9 +8825,9 @@ const jsonData = {
                   "propertyName":{"ja":"車載電池の放電可能容量値1", "en":"Dischargeable capacity of vehicle mounted battery 1"},
                   "accessRule":{"get":"required", "set":"notApplicable", "inf":"optional"},
                   "data":{ "$ref":"#/definitions/number_0-999999999", "unit":"Wh" },
-                  "note":{ 
-                      "ja":"車載電池の放電可能容量値1 は、電気自動車充放電器に接続された電気自動車から出力される場合、搭載を必須とする。応答できない状況にある場合、不可応答を返す。", 
-                      "en":"The installation of \"Dischargeable capacity of vehicle mounted battery 1\" is mandatory in case of output from an electric vehicle connected to an electric vehicle charger/discharger. Where no response can be returned, \"Response impossible\" is returned." 
+                  "note":{
+                      "ja":"車載電池の放電可能容量値1 は、電気自動車充放電器に接続された電気自動車から出力される場合、搭載を必須とする。応答できない状況にある場合、不可応答を返す。",
+                      "en":"The installation of \"Dischargeable capacity of vehicle mounted battery 1\" is mandatory in case of output from an electric vehicle connected to an electric vehicle charger/discharger. Where no response can be returned, \"Response impossible\" is returned."
                   }
               },
               "0xC1":{
@@ -8854,9 +8854,9 @@ const jsonData = {
                   },
                   "accessRule":{"get":"required", "set":"notApplicable", "inf":"optional"},
                   "data":{ "$ref":"#/definitions/number_0-999999999", "unit":"Wh" },
-                  "note":{ 
-                      "ja":"車載電池の放電可能残容量1、車載電池の放電可能残容量3 は、電気自動車充放電器に接続された電気自動車から出力される場合、いずれかの搭載を必須とする。応答できない状況にある場合、不可応答を返す。", 
-                      "en":"The installation of \"Remaining dischargeable capacity of vehicle mounted battery 1\" or \"Remaining dischargeable capacity of vehicle mounted battery 3\" is mandatory in case of output from an electric vehicle connected to an electric vehicle charger/discharger. Where no response can be returned, \"Response impossible\" is returned." 
+                  "note":{
+                      "ja":"車載電池の放電可能残容量1、車載電池の放電可能残容量3 は、電気自動車充放電器に接続された電気自動車から出力される場合、いずれかの搭載を必須とする。応答できない状況にある場合、不可応答を返す。",
+                      "en":"The installation of \"Remaining dischargeable capacity of vehicle mounted battery 1\" or \"Remaining dischargeable capacity of vehicle mounted battery 3\" is mandatory in case of output from an electric vehicle connected to an electric vehicle charger/discharger. Where no response can be returned, \"Response impossible\" is returned."
                   }
               },
               "0xC3":{
@@ -8883,9 +8883,9 @@ const jsonData = {
                   },
                   "accessRule":{"get":"required", "set":"notApplicable", "inf":"optional"},
                   "data":{ "$ref":"#/definitions/number_0-100%" },
-                  "note":{ 
-                      "ja":"車載電池の放電可能残容量1、車載電池の放電可能残容量3 は、電気自動車充放電器に接続された電気自動車から出力される場合、いずれかの搭載を必須とする。応答できない状況にある場合、不可応答を返す。", 
-                      "en":"The installation of \"Remaining dischargeable capacity of vehicle mounted battery 1\" or \"Remaining dischargeable capacity of vehicle mounted battery 3\" is mandatory in case of output from an electric vehicle connected to an electric vehicle charger/discharger. Where no response can be returned, \"Response impossible\" is returned." 
+                  "note":{
+                      "ja":"車載電池の放電可能残容量1、車載電池の放電可能残容量3 は、電気自動車充放電器に接続された電気自動車から出力される場合、いずれかの搭載を必須とする。応答できない状況にある場合、不可応答を返す。",
+                      "en":"The installation of \"Remaining dischargeable capacity of vehicle mounted battery 1\" or \"Remaining dischargeable capacity of vehicle mounted battery 3\" is mandatory in case of output from an electric vehicle connected to an electric vehicle charger/discharger. Where no response can be returned, \"Response impossible\" is returned."
                   }
               },
               "0xC5":{
@@ -9068,9 +9068,9 @@ const jsonData = {
                       "size":1,
                       "enum":[{"edt":"0x10", "state":{"ja":"接続確認", "en":"Connection confirmation"}}]
                   },
-                  "note":{ 
-                      "ja":"車両接続確認は充放電器タイプがDC_タイプAA の場合のみ必須とする。", 
-                      "en":"Vehicle connection confirmation is only mandatory when the charger/discharger type is DC_type AA." 
+                  "note":{
+                      "ja":"車両接続確認は充放電器タイプがDC_タイプAA の場合のみ必須とする。",
+                      "en":"Vehicle connection confirmation is only mandatory when the charger/discharger type is DC_type AA."
                   }
               },
               "0xCE":{
@@ -9078,27 +9078,27 @@ const jsonData = {
                   "propertyName":{"ja":"車載電池の充電可能容量値", "en":"Chargeable capacity of vehicle mounted battery"},
                   "accessRule":{"get":"required", "set":"notApplicable", "inf":"optional"},
                   "data":{ "$ref":"#/definitions/number_0-999999999", "unit":"Wh" },
-                  "note":{ 
-                      "ja":"車載電池の充電可能容量値、車載電池の充電可能残容量値は電気自動車充放電器に接続された電気自動車から出力される場合、搭載を必須とする。", 
-                      "en":"The installation of \"chargeable capacity of vehicle mounted battery\" and \"chargeable capacity of vehicle mounted battery\" is mandatory in case of output from an electric vehicle connected to an electric vehicle charger/discharger." 
+                  "note":{
+                      "ja":"車載電池の充電可能容量値、車載電池の充電可能残容量値は電気自動車充放電器に接続された電気自動車から出力される場合、搭載を必須とする。",
+                      "en":"The installation of \"chargeable capacity of vehicle mounted battery\" and \"chargeable capacity of vehicle mounted battery\" is mandatory in case of output from an electric vehicle connected to an electric vehicle charger/discharger."
                   }              },
               "0xCF":{
                   "validRelease":{"from":"J", "to":"latest"},
                   "propertyName":{"ja":"車載電池の充電可能残容量値", "en":"Remaining chargeable capacity of vehicle mounted battery"},
                   "accessRule":{"get":"required", "set":"notApplicable", "inf":"optional"},
                   "data":{ "$ref":"#/definitions/number_0-999999999", "unit":"Wh" },
-                  "note":{ 
-                      "ja":"車載電池の充電可能容量値、車載電池の充電可能残容量値は電気自動車充放電器に接続された電気自動車から出力される場合、搭載を必須とする。", 
-                      "en":"The installation of \"chargeable capacity of vehicle mounted battery\" and \"chargeable capacity of vehicle mounted battery\" is mandatory in case of output from an electric vehicle connected to an electric vehicle charger/discharger." 
+                  "note":{
+                      "ja":"車載電池の充電可能容量値、車載電池の充電可能残容量値は電気自動車充放電器に接続された電気自動車から出力される場合、搭載を必須とする。",
+                      "en":"The installation of \"chargeable capacity of vehicle mounted battery\" and \"chargeable capacity of vehicle mounted battery\" is mandatory in case of output from an electric vehicle connected to an electric vehicle charger/discharger."
                   }              },
               "0xD0":{
                   "validRelease":{"from":"D", "to":"latest"},
                   "propertyName":{"ja":"車載電池の使用容量値1", "en":"Used capacity of vehicle mounted battery 1 "},
                   "accessRule":{"get":"required", "set":"notApplicable", "inf":"optional"},
                   "data":{ "$ref":"#/definitions/number_0-999999999", "unit":"Wh" },
-                  "note":{ 
-                      "ja":"車載電池の使用容量値1 は、電気自動車充放電器に接続された電気自動車から出力される場合、搭載を必須とする。応答できない状況にある場合、不可応答を返す。", 
-                      "en":"The installation of \"Used capacity of vehicle mounted battery 1\" is mandatory in case of output from an electric vehicle connected to an electric vehicle charger/discharger. Where no response can be returned, \"Response impossible\" is returned." 
+                  "note":{
+                      "ja":"車載電池の使用容量値1 は、電気自動車充放電器に接続された電気自動車から出力される場合、搭載を必須とする。応答できない状況にある場合、不可応答を返す。",
+                      "en":"The installation of \"Used capacity of vehicle mounted battery 1\" is mandatory in case of output from an electric vehicle connected to an electric vehicle charger/discharger. Where no response can be returned, \"Response impossible\" is returned."
                   }
               },
               "0xD1":{
@@ -9221,9 +9221,9 @@ const jsonData = {
                   "propertyName":{"ja":"車載電池の電池残容量1", "en":"Remaining stored electricity of vehicle mounted battery1"},
                   "accessRule":{"get":"required", "set":"notApplicable", "inf":"optional"},
                   "data":{ "$ref":"#/definitions/number_0-999999999", "unit":"Wh" },
-                  "note":{ 
-                      "ja":"車載電池の電池残容量1、車載電池の電池残容量3 は、電気自動車充放電器に接続された電気自動車から出力される場合、いずれかの搭載を必須とする。応答できない状況にある場合、不可応答を返す。", 
-                      "en":"The installation of \"Remaining stored electricity of vehicle mounted battery 1\" or \"Remaining stored electricity of vehicle mounted battery 3\" is mandatory in case of output from an electric vehicle connected to an electric vehicle charger/discharger. Where no response can be returned, \"Response impossible\" is returned." 
+                  "note":{
+                      "ja":"車載電池の電池残容量1、車載電池の電池残容量3 は、電気自動車充放電器に接続された電気自動車から出力される場合、いずれかの搭載を必須とする。応答できない状況にある場合、不可応答を返す。",
+                      "en":"The installation of \"Remaining stored electricity of vehicle mounted battery 1\" or \"Remaining stored electricity of vehicle mounted battery 3\" is mandatory in case of output from an electric vehicle connected to an electric vehicle charger/discharger. Where no response can be returned, \"Response impossible\" is returned."
                   }
               },
               "0xE3":{
@@ -9247,9 +9247,9 @@ const jsonData = {
                   "propertyName":{"ja":"車載電池の電池残容量3", "en":"Remaining stored electricity of vehicle mounted battery3"},
                   "accessRule":{"get":"required", "set":"notApplicable", "inf":"optional"},
                   "data":{ "$ref":"#/definitions/number_0-100%" },
-                  "note":{ 
-                      "ja":"車載電池の電池残容量1、車載電池の電池残容量3 は、電気自動車充放電器に接続された電気自動車から出力される場合、いずれかの搭載を必須とする。応答できない状況にある場合、不可応答を返す。", 
-                      "en":"The installation of \"Remaining stored electricity of vehicle mounted battery 1\" or \"Remaining stored electricity of vehicle mounted battery 3\" is mandatory in case of output from an electric vehicle connected to an electric vehicle charger/discharger. Where no response can be returned, \"Response impossible\" is returned." 
+                  "note":{
+                      "ja":"車載電池の電池残容量1、車載電池の電池残容量3 は、電気自動車充放電器に接続された電気自動車から出力される場合、いずれかの搭載を必須とする。応答できない状況にある場合、不可応答を返す。",
+                      "en":"The installation of \"Remaining stored electricity of vehicle mounted battery 1\" or \"Remaining stored electricity of vehicle mounted battery 3\" is mandatory in case of output from an electric vehicle connected to an electric vehicle charger/discharger. Where no response can be returned, \"Response impossible\" is returned."
                   }
               },
               "0xE6":{
@@ -9284,9 +9284,9 @@ const jsonData = {
                           { "$ref":"#/definitions/state_NotSet_00000000" }
                       ]
                   },
-                  "note":{ 
-                      "ja":"充電量設定値1（または2）を使用する場合は充電量設定値2（または1）を使用しない。", 
-                      "en":"When \"Charging amount setting 1 (or 2)\" is used, \"Charging amount setting 2 (or 1)\" shall not be used." 
+                  "note":{
+                      "ja":"充電量設定値1（または2）を使用する場合は充電量設定値2（または1）を使用しない。",
+                      "en":"When \"Charging amount setting 1 (or 2)\" is used, \"Charging amount setting 2 (or 1)\" shall not be used."
                   }
               },
               "0xE9":{
@@ -9299,9 +9299,9 @@ const jsonData = {
                           { "$ref":"#/definitions/state_NotSet_00000000" }
                       ]
                   },
-                  "note":{ 
-                      "ja":"充電量設定値1（または2）を使用する場合は充電量設定値2（または1）を使用しない。", 
-                      "en":"When \"Charging amount setting 1 (or 2)\" is used, \"Charging amount setting 2 (or 1)\" shall not be used." 
+                  "note":{
+                      "ja":"充電量設定値1（または2）を使用する場合は充電量設定値2（または1）を使用しない。",
+                      "en":"When \"Charging amount setting 1 (or 2)\" is used, \"Charging amount setting 2 (or 1)\" shall not be used."
                   }
               },
               "0xEA":{
@@ -9463,7 +9463,7 @@ const jsonData = {
               "type":"state",
               "size":1,
               "enum":[
-                  {"edt":"0x00", "state":{"ja":"系統連系（逆潮流可）", 
+                  {"edt":"0x00", "state":{"ja":"系統連系（逆潮流可）",
                       "en":"System-interconnected type (reverse power flow acceptable)"}},
                   {"edt":"0x01", "state":{"ja":"独立", "en":"Independent type"}},
                   {"edt":"0x02", "state":{"ja":"系統連系（逆潮流不可）",
@@ -10005,7 +10005,7 @@ const jsonData = {
                                   }
                               ]
                           }
-                      }    
+                      }
                   }
               ]
           },
@@ -13652,7 +13652,7 @@ const jsonData = {
                       "enum":[
                           {"edt":"0xFF", "state":{"ja":"未設定", "en":"undefined"}}
                       ]
-                  }            
+                  }
               ]
           }
       },
@@ -13794,7 +13794,7 @@ const jsonData = {
                             "size":3,
                             "enum":[{"edt":"0xFFFFFF", "state":{"ja":"未設定", "en":"undefined"}}]
                           }
-                        ]  
+                        ]
                       }
                   },
                   {
@@ -13807,7 +13807,7 @@ const jsonData = {
                             "size":3,
                             "enum":[{"edt":"0xFFFFFF", "state":{"ja":"未設定", "en":"undefined"}}]
                           }
-                        ]  
+                        ]
                       }
                   },
                   {
@@ -13820,7 +13820,7 @@ const jsonData = {
                             "size":3,
                             "enum":[{"edt":"0xFFFFFF", "state":{"ja":"未設定時", "en":"undefined"}}]
                           }
-                        ]  
+                        ]
                       }
                   },
                   {
@@ -13833,7 +13833,7 @@ const jsonData = {
                             "size":3,
                             "enum":[{"edt":"0xFFFFFF", "state":{"ja":"未設定時", "en":"undefined"}}]
                           }
-                        ]  
+                        ]
                       }
                   }
               ]
@@ -14071,8 +14071,8 @@ const jsonData = {
                             "oneOf":[
                                 {"$ref":"#/definitions/number_50-250", "unit":"Celsius" },
                                 {
-                                    "type":"state", 
-                                    "size":1, 
+                                    "type":"state",
+                                    "size":1,
                                     "enum":[ {"edt":"0xFF", "state":{"ja":"設定なし", "en":"No setting"} } ]
                                 }
                             ]
@@ -14084,8 +14084,8 @@ const jsonData = {
                             "oneOf":[
                                 { "$ref":"#/definitions/number_50-250", "unit":"Celsius" },
                                 {
-                                    "type":"state", 
-                                    "size":1, 
+                                    "type":"state",
+                                    "size":1,
                                     "enum":[ {"edt":"0xFF", "state":{"ja":"設定なし", "en":"No setting"} } ]
                                 }
                             ]
@@ -14097,8 +14097,8 @@ const jsonData = {
                             "oneOf":[
                                 { "$ref":"#/definitions/number_50-250", "unit":"Celsius" },
                                 {
-                                    "type":"state", 
-                                    "size":1, 
+                                    "type":"state",
+                                    "size":1,
                                     "enum":[ {"edt":"0xFF", "state":{"ja":"設定なし", "en":"No setting"} } ]
                                 }
                             ]
@@ -15135,7 +15135,7 @@ const jsonData = {
                       "type":"state",
                       "size":2,
                       "enum":[{"edt":"0xFFFF", "state":{"ja":"残り時間不明","en":"Unknown"}}]
-                  }            
+                  }
               ]
           }
       },
@@ -16086,7 +16086,7 @@ const jsonData = {
                         ]
                       }
                   }
-              ]              
+              ]
           }
       }
   }
@@ -16422,7 +16422,7 @@ const jsonData = {
                       "name":"characterString",
                       "element":{ "$ref":"#/definitions/raw_1-244" }
                   }
-              ]              
+              ]
           }
       },
       "0xB4":{
@@ -16446,7 +16446,7 @@ const jsonData = {
                         ]
                       }
                   }
-              ]              
+              ]
           }
       }
   }
